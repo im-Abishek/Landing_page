@@ -8,17 +8,23 @@ import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 
 const usestyles = makeStyles((theme)=>({
     navSection:{
-        display:"flex",
-        flex:1,
-        alignItems:"center",
-        flexDirection:"row",
-        marginTop:"1.5rem",
+        // height:"fit_content",
+        paddingTop:"1.5rem",
+        backgroundColor:"#EFF2F7",
+        width:"100%",
+        
 
         [theme.breakpoints.between('sm','md')]:{
             width:"100%"
         },
     },
     row:{
+        display:"flex",
+        flex:1,
+        alignItems:"center",
+        flexDirection:"row",
+        justifyContent:"space-evenly",
+
         [theme.breakpoints.between('md','lg')]:{
             width:"100%"
         },
@@ -36,15 +42,15 @@ const usestyles = makeStyles((theme)=>({
         fontSize:"24px",
 
         [theme.breakpoints.between('md','lg')]:{
-            marginLeft:"3rem",
-            marginRight:"6rem",
+            // marginLeft:"13rem",
+            // marginRight:"6rem",
             fontSize:"16px",
             fontWeight:"bold",
             marginTop:"0.3rem"
         },
         [theme.breakpoints.between('sm','md')]:{
-            marginLeft:"0rem",
-            marginRight:"2rem",
+            // marginLeft:"0rem",
+            // marginRight:"2rem",
             fontSize:"16px",
             fontWeight:"bold",
             marginTop:"0.3rem"
@@ -56,19 +62,19 @@ const usestyles = makeStyles((theme)=>({
     },
     center_content:{
         
-        marginTop:"5px",
-        marginLeft:"19rem",
-        marginRight:"13rem",
+        marginBottom:"15px",
+        // marginLeft:"19rem",
+        // marginRight:"13rem",
 
         [theme.breakpoints.between('md','lg')]:{
-            marginLeft:"0rem",
-            marginRight:"7rem !important",
+            // marginLeft:"0rem",
+            // marginRight:"7rem !important",
             fontSize:"12px",
             marginTop:"0.5rem"
         },
         [theme.breakpoints.between('sm','md')]:{
-            marginLeft:"0rem",
-            marginRight:"2.5rem !important",
+            // marginLeft:"0rem",
+            // marginRight:"2.5rem !important",
             fontSize:"12px",
             marginTop:"0.5rem"
         },
@@ -86,22 +92,10 @@ const usestyles = makeStyles((theme)=>({
         },
     },
     right_content:{
-
+        marginBottom:"10px",
        [theme.breakpoints.between('xs','sm')]:{
         display:"none"
     },
-    },
-    right_text:{
-        textDecoration:"none",
-        color:"#6D6D6D",
-        paddingRight:"2rem",
-
-        [theme.breakpoints.between('xs','sm')]:{
-            display:"none"
-        },
-        [theme.breakpoints.between('sm','md')]:{
-            paddingRight:"1rem"
-        },
     },
     button:{
         backgroundColor:"#7073BE !important",
@@ -131,7 +125,7 @@ const HeaderComponent = () => {
     const classes = usestyles()
 
     return (
-        <Container fixed className={classes.navSection}>
+        <Box fixed className={classes.navSection}>
             <Box className={classes.row} style={{display:"flex",flexDirection:"row"}}>
                 <Box className={classes.heading}>
                     <p>LAWCO.</p>
@@ -150,7 +144,7 @@ const HeaderComponent = () => {
                    <DensityMediumIcon/>
                 </Box>
             </Box>
-        </Container>
+        </Box>
         
     )
 }
