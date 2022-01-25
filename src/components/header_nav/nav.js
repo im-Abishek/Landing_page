@@ -30,7 +30,7 @@ const usestyles = makeStyles((theme)=>({
         },
     },
     heading:{
-        color:"#19233C",
+        color:"#7073BE",
         fontWeight:"700",
         display:"flex",
         fontSize:"24px",
@@ -57,7 +57,7 @@ const usestyles = makeStyles((theme)=>({
     center_content:{
         
         marginTop:"5px",
-        marginLeft:"13rem",
+        marginLeft:"19rem",
         marginRight:"13rem",
 
         [theme.breakpoints.between('md','lg')]:{
@@ -105,7 +105,7 @@ const usestyles = makeStyles((theme)=>({
     },
     button:{
         backgroundColor:"#7073BE !important",
-        borderRadius:"20px 0px 20px 20px !important"
+        borderRadius:"5px !important",
     },
     icon:{
         display:"none",
@@ -113,7 +113,14 @@ const usestyles = makeStyles((theme)=>({
             display:"flex",
             
         },
-    }
+    },
+    button_1:{
+        borderRadius:"5px !important",
+        marginLeft:"0rem",
+        border:"1px solid #7073BE",
+        color:"#7073BE !important",
+        marginRight:"1rem !important"
+    },
 
 
 }))
@@ -127,7 +134,7 @@ const HeaderComponent = () => {
         <Container fixed className={classes.navSection}>
             <Box className={classes.row} style={{display:"flex",flexDirection:"row"}}>
                 <Box className={classes.heading}>
-                    <p>NFT PASSPORT</p>
+                    <p>LAWCO.</p>
                 </Box>
                 <Box className={classes.center_content}>
                      <a className={classes.center_text} href='#'>Home</a>
@@ -136,8 +143,8 @@ const HeaderComponent = () => {
                      <a className={classes.center_text} href='#'>Review</a>
                 </Box>
                 <Box className={classes.right_content}>
-                     <a className={classes.right_text} href='#'>Log in</a>
-                     <Button className={classes.button} variant="contained">Sign Up</Button>
+                     <Button className={classes.button_1} variant="outlined">Log In</Button>
+                     <Button className={classes.button} variant="contained">Register</Button>
                 </Box>
                 <Box className={classes.icon}>
                    <DensityMediumIcon/>

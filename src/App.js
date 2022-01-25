@@ -31,7 +31,7 @@ function App() {
       <Section_5/>
       <Section_6/>
       <Section_7/>
-      <Section_8/>
+      {/* <Section_8/> */}
       <Section_9/>
       <Section_10/>
       <Section_11/>

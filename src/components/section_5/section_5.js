@@ -352,7 +352,8 @@ const useStyles = makeStyles((theme)=>({
     hr:{
         position:"absolute",
         top:"30%",
-        left:"5%"
+        left:"5%",
+        
     },
     vr:{
         position:"absolute",
@@ -462,9 +463,9 @@ const Section_5 = () => {
                                 <p className={classes.row_Text}>Track <br/> priorities</p>
                              </Box>
                          </Box>
-                         {/* <Image src={Lines_hr} className={classes.hr} />
+                         <Image src={Lines_hr} className={classes.hr} />
                          <Image src={Lines_vr} className={classes.vr} />
-                         <Image src={Lines_vr} className={classes.vr2} /> */}
+                         <Image src={Lines_vr} className={classes.vr2} />
                     </Box>
                 </Box>
                 <Image src={Design} className={classes.design}/>
