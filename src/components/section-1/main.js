@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 import { Icon } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import Lamge1 from "../images/section_1/human.svg";
+import Iamge1 from "../images/section_1/human.svg";
 import Mace from "../images/section_1/mace.svg";
 import Lawyer from "../images/section_1/lawyer.svg";
 import weight from "../images/section_1/weightmachine.svg";
@@ -14,6 +14,7 @@ import human_1 from "../images/section_1/human1.svg";
 import human_2 from "../images/section_1/human2.svg";
 import human_3 from "../images/section_1/human3.svg";
 import Main_BelowContent from "./mainPage_belowbox";
+import '../../App.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,8 +50,8 @@ const useStyles = makeStyles((theme) => ({
     
   },
   Bold_words: {
-    fontStyle: "italic",
-    fontWeight:'bold',
+    // fontStyle: "italic!important",
+    // fontWeight:'900',
     fontSize: 64,
     color: "#19233C",
     paddingBottom:16,
@@ -266,6 +267,7 @@ const useStyles = makeStyles((theme) => ({
     color:'white',
     fontSize:13
    },
+   
 }));
 
 const Main_properties = () => {
@@ -281,10 +283,10 @@ const Main_properties = () => {
               <span style={{marginTop:'-5px'}} className={classes.Rectangle}></span>
               <h6 className={classes.FilmWords}>Best law Film</h6>
             </Box>
-            <h1 className={classes.Bold_words}>
+            <h1 className={classes.Bold_words} id="Lawyer_text">
               The Lawyer You Choose will make a Difference
             </h1>
-            <p className={classes.Bold_words_2}>
+            <p className={classes.Bold_words_2} >
               we are providing the best law serivice for the people.We are
               provifing all kind of law services that you need.
             </p>
@@ -303,7 +305,7 @@ const Main_properties = () => {
               </Box>
           </Box>
           <Box component="div" className={classes.Picture_content}>
-            <img src={Lamge1} className={classes.image} />
+            <img src={Iamge1} className={classes.image} />
             <img src={Mace} className=  {classes.Main_img1} />
             <img src={Lawyer} className={classes.Main_img2} />
             <img src={weight} className={classes.Main_img3} />

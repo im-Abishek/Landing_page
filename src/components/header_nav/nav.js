@@ -10,11 +10,14 @@ import Link from '@mui/material/Link';
 const usestyles = makeStyles((theme)=>({
     navSection:{
         // height:"fit_content",
+
         paddingTop:"1rem",
         backgroundColor:"#EFF2F7",
         width:"100%",
         position:"fixed",
         zIndex:3,
+
+
         
 
         [theme.breakpoints.between('sm','md')]:{
@@ -27,10 +30,12 @@ const usestyles = makeStyles((theme)=>({
         alignItems:"center",
         flexDirection:"row",
         justifyContent:"space-evenly",
+
         position:"fixed",
         zIndex:3,
         backgroundColor:"#EFF2F7",
         width:"100%",
+
 
         [theme.breakpoints.between('md','lg')]:{
             width:"100%"
@@ -76,14 +81,18 @@ const usestyles = makeStyles((theme)=>({
         // marginRight:"13rem",
 
         [theme.breakpoints.between('md','lg')]:{
+
             marginRight:"3rem",
             marginLeft:"6rem !important",
+
             fontSize:"12px",
             marginTop:"0.2rem"
         },
         [theme.breakpoints.between('sm','md')]:{
+
             marginRight:"2rem",
             marginLeft:"3.5rem !important",
+
             fontSize:"12px",
             marginTop:"0.2rem"
         },
@@ -170,7 +179,7 @@ const HeaderComponent = () => {
                 </Box>
             </Box>
         </Box>
-        // className={classes.center_text}
+
     )
 }
 
