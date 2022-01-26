@@ -18,7 +18,7 @@ import Main_BelowContent from "./mainPage_belowbox";
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingBottom: 10,
-    paddingTop: 20,
+    paddingTop: 40,
     marginBottom: 60,
    
   },
