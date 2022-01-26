@@ -81,6 +81,10 @@ const useStyles = makeStyles((theme) => ({
     height: "100",
     marginBottom: 50,
     padding: 10,
+    background:'#FFFFFF',
+border: '1px solid #EFF2F7',
+boxSizing:'border-box',
+borderRadius:'10px',
     [theme.breakpoints.between("md", "lg")]: {
       width: "310px",
     },
@@ -156,8 +160,8 @@ const Section_3 = () => {
   });
   return (
     <>
-      <section> 
-        {/* style={{ background: "#EFF2F7" }} */}
+      <section style={{ background: "#EFF2F7" }}> 
+        
         <Container className={classes.root}>
           <h1 className={classes.heading}>
             {state.heading}
