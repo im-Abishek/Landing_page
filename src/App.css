@@ -6,7 +6,19 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+#Lawyer_text{
+  font-weight: 900;
+  font-style:italic;
+  
+}
+#title{
+  background: linear-gradient(45deg,  #7073BE 20%, #FF9B61 0%);
+  -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            font-family: 'Playfair Display';
+font-style: italic;
+  /* fontColor: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)", */
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
