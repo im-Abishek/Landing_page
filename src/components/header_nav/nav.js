@@ -4,14 +4,20 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
+import Link from '@mui/material/Link';
 
 
 const usestyles = makeStyles((theme)=>({
     navSection:{
         // height:"fit_content",
-        paddingTop:"1.5rem",
+
+        paddingTop:"1rem",
         backgroundColor:"#EFF2F7",
         width:"100%",
+        position:"fixed",
+        zIndex:3,
+
+
         
 
         [theme.breakpoints.between('sm','md')]:{
@@ -25,6 +31,12 @@ const usestyles = makeStyles((theme)=>({
         flexDirection:"row",
         justifyContent:"space-evenly",
 
+        position:"fixed",
+        zIndex:3,
+        backgroundColor:"#EFF2F7",
+        width:"100%",
+
+
         [theme.breakpoints.between('md','lg')]:{
             width:"100%"
         },
@@ -32,7 +44,8 @@ const usestyles = makeStyles((theme)=>({
             width:"100%"
         },
         [theme.breakpoints.between('xs','sm')]:{
-            justifyContent:"space-between"
+            justifyContent:"space-between",
+            width:"100%"
         },
     },
     heading:{
@@ -58,6 +71,7 @@ const usestyles = makeStyles((theme)=>({
         [theme.breakpoints.between('xs','sm')]:{
             fontSize:"24px",
             fontWeight:"700 !important",
+            marginLeft:"1rem"
         },
     },
     center_content:{
@@ -67,24 +81,28 @@ const usestyles = makeStyles((theme)=>({
         // marginRight:"13rem",
 
         [theme.breakpoints.between('md','lg')]:{
-            // marginLeft:"0rem",
-            // marginRight:"7rem !important",
+
+            marginRight:"3rem",
+            marginLeft:"6rem !important",
+
             fontSize:"12px",
-            marginTop:"0.5rem"
+            marginTop:"0.2rem"
         },
         [theme.breakpoints.between('sm','md')]:{
-            // marginLeft:"0rem",
-            // marginRight:"2.5rem !important",
+
+            marginRight:"2rem",
+            marginLeft:"3.5rem !important",
+
             fontSize:"12px",
-            marginTop:"0.5rem"
+            marginTop:"0.2rem"
         },
         [theme.breakpoints.between('xs','sm')]:{
             display:"none"
         },
     },
     center_text:{
-        textDecoration:"none",
-        color:"#6D6D6D",
+        textDecoration:"none !important",
+        color:"#6D6D6D !important",
         paddingLeft:"2rem",
 
         [theme.breakpoints.between('sm','md')]:{
@@ -100,12 +118,20 @@ const usestyles = makeStyles((theme)=>({
     button:{
         backgroundColor:"#7073BE !important",
         borderRadius:"5px !important",
+
+        [theme.breakpoints.between('xs','lg')]:{
+            height:"25px",
+            width:"80px",
+            fontSize:"10px !important",
+            marginTop:"0rem"
+        },
     },
     icon:{
         display:"none",
         [theme.breakpoints.between('xs','sm')]:{
             display:"flex",
-            
+            marginTop:"-1rem",
+            marginRight:"1rem"
         },
     },
     button_1:{
@@ -113,7 +139,15 @@ const usestyles = makeStyles((theme)=>({
         marginLeft:"0rem",
         border:"1px solid #7073BE",
         color:"#7073BE !important",
-        marginRight:"1rem !important"
+        marginRight:"1rem !important",
+
+        [theme.breakpoints.between('xs','lg')]:{
+            height:"25px",
+            width:"80px",
+            fontSize:"10px !important",
+            marginRight:"0.5rem !important",
+            marginTop:"0rem"
+        },
     },
 
 
@@ -131,10 +165,10 @@ const HeaderComponent = () => {
                     <p>LAWCO.</p>
                 </Box>
                 <Box className={classes.center_content}>
-                     <a className={classes.center_text} href='#'>Home</a>
-                     <a className={classes.center_text} href='#'>Services</a>
-                     <a className={classes.center_text} href='#'>Project</a>
-                     <a className={classes.center_text} href='#'>Review</a>
+                   <Link className={classes.center_text} href="#">Home</Link>
+                   <Link className={classes.center_text} href="#">Services</Link>
+                   <Link className={classes.center_text} href="#">Project</Link>
+                   <Link className={classes.center_text} href="#">Review</Link>
                 </Box>
                 <Box className={classes.right_content}>
                      <Button className={classes.button_1} variant="outlined">Log In</Button>
@@ -145,7 +179,7 @@ const HeaderComponent = () => {
                 </Box>
             </Box>
         </Box>
-        
+
     )
 }
 

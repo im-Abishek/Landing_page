@@ -136,6 +136,8 @@ const useStyles = makeStyles((theme)=>({
         borderRadius:"5px",
         marginLeft:"5rem",
         backgroundColor:"white",
+        zIndex:1,
+        position:"relative",
 
         [theme.breakpoints.between('sm','lg')]: {
             height:"135px",
@@ -161,6 +163,7 @@ const useStyles = makeStyles((theme)=>({
         alignItems:"center",
         boxShadow: "0px 9.55269px 19.1054px rgba(145, 145, 145, 0.06)",
         backgroundColor:"white",
+        
 
         [theme.breakpoints.between('xs','lg')]: {
             height:"30px",
@@ -192,6 +195,7 @@ const useStyles = makeStyles((theme)=>({
     column_text:{
         fontSize:"15px",
         color:"#383F5B",
+        marginTop:"12px",
 
         [theme.breakpoints.between('xs','lg')]: {
             fontSize:"8px"
@@ -236,6 +240,7 @@ const useStyles = makeStyles((theme)=>({
     price_1:{
         fontSize:"18px",
         color:"#383F5B",
+        marginTop:"13px",
 
         [theme.breakpoints.between('xs','lg')]: {
             fontSize:"10px"
@@ -306,6 +311,8 @@ const useStyles = makeStyles((theme)=>({
         marginLeft:"2rem",
         textAlign:"center",
         backgroundColor:"white",
+        zIndex:1,
+        position:"relative",
 
         [theme.breakpoints.between('sm','lg')]: {
             height:"75px",
@@ -353,17 +360,30 @@ const useStyles = makeStyles((theme)=>({
         position:"absolute",
         top:"30%",
         left:"5%",
+
+        [theme.breakpoints.between('xs','lg')]: {
+            height:"8.2rem"
+        }
         
     },
     vr:{
         position:"absolute",
         top:"29%",
-        left:"5%"
+        left:"5%",
+
+        [theme.breakpoints.between('xs','lg')]: {
+            width:"18rem"
+        }
     },
     vr2:{
         position:"absolute",
         top:"84%",
-        left:"5%"
+        left:"5%",
+
+        [theme.breakpoints.between('xs','lg')]: {
+            width:"18rem",
+            height:"0.5rem"
+        }
     },
     design:{
         position:"absolute",
