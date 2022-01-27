@@ -11,7 +11,7 @@ import { NavBar } from "../../provider/NavBarProvider";
 
 const useStyles = makeStyles((theme) => ({
   root:{
-     padding:'100px 0px 0px 50px',
+     padding:'100px 0px 0px 5px',
      marginBottom:'40px'
      
   },
@@ -19,8 +19,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 40,
+    
     [theme.breakpoints.down("sm")]: {
       fontSize: 33,
+      padding:"0px 30px 0px 30px"
     },
   },
   box_properties: {

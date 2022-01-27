@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Box } from "@mui/material";
 // import Header from "../../Header/header";
 import { Button } from "@mui/material";
@@ -8,6 +8,7 @@ import Law from "../images/section_1/law.svg";
 import Defent from "../images/section_1/defendant.svg";
 import Feedback from "../images/section_1/feedback.svg";
 import Award from "../images/section_1/award.svg";
+import { NavBar } from "../../provider/NavBarProvider";
 
 const useStyles = makeStyles((theme) => ({
   root_content: {
@@ -140,9 +141,9 @@ const list = [
 
 const Main_BelowContent = () => {
   const classes = useStyles();
-
+  const {open,setOpen} = useContext(NavBar)
   return (
-    <Box className={classes.root_content}>
+    <Box className={classes.root_content} style={{opacity: open ? 0.7 : 1}}>
       {list.map((items, index) => {
         return (
           <Box className={classes.main}>

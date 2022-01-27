@@ -22,7 +22,9 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 10,
     paddingTop: 70,
     marginBottom: 60,
-   zIndex:1
+    zIndex:1,
+    
+  //  background:"#EFF2F7"
   },
   Main: {
     display: "flex",
@@ -276,7 +278,7 @@ const Main_properties = () => {
   const classes = useStyles();
   const {open,setOpen} = useContext(NavBar)
   return (
-    <section style={{ background: open ? "gray":"#EFF2F7"  ,opacity:open ? 0.6:1 }}>
+    <section style={{opacity: open ? 0.7 : 1,background: open ? "rgba(25, 35, 60, 0.1)":"#EFF2F7"}}>
 
       <Container className={classes.root}>
         {/* <Header/> */}
@@ -308,15 +310,15 @@ const Main_properties = () => {
               </Box>
           </Box>
           <Box component="div" className={classes.Picture_content}>
-            <img src={Iamge1} className={classes.image} />
+            <img src={Iamge1} className={classes.image}  />
             <img src={Mace} className=  {classes.Main_img1} />
             <img src={Lawyer} className={classes.Main_img2} />
             <img src={weight} className={classes.Main_img3} />
-            <Box component="div" className={classes.Picture_box}>
+            <Box component="div" className={classes.Picture_box} >
              <p style={{color:'#19233C'}}>Happy clients</p>
               <img src={human_1} className={classes.images_1} />
-              <img src={human_2} className={classes.images_2}/>
-              <img src={human_3} className={classes.images_3}/>
+              <img src={human_2} className={classes.images_2} />
+              <img src={human_3} className={classes.images_3} />
               <span className={classes.userCount}>2K+</span>
             </Box>
           </Box>
