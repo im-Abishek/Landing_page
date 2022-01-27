@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 // import { useMediaQuery } from 'beautiful-react-hooks';
 import { makeStyles } from '@mui/styles';
 import Container from '@mui/material/Container';
@@ -13,6 +13,7 @@ import box3_img1 from '../images/section_2/box3_img1.svg'
 import box3_img2 from '../images/section_2/box3_img2.svg'
 import box3_img3 from '../images/section_2/box3_img3.svg'
 import box3_img22 from '../images/section_2/box3_img2-2.svg'
+import { NavBar } from '../../provider/NavBarProvider';
 
 const useStyles = makeStyles((theme)=>({
     root:{
@@ -308,9 +309,9 @@ const useStyles = makeStyles((theme)=>({
 const Section_2 = () => {
 
     const classes = useStyles()
-
+    const {open,setOpen} = useContext(NavBar)
     return (
-        <Container className={classes.root}>
+        <Container className={classes.root} >
             <Box className={classes.heading}>
                 <p className={classes.heading_1}>Our Works</p>
                 <p className={classes.heading_2}>Exploration Work</p>
