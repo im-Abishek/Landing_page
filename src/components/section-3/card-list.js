@@ -10,7 +10,7 @@ import instagram from "../images/section_3/instagram.svg";
 
 const useStyles = makeStyles((theme) => ({
   root:{
-     padding:'100px 0px 0px 50px',
+     padding:'100px 0px 80px 50px',
      marginBottom:'40px'
      
   },
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     outline: "none",
     border: "0px solid",
-    marginTop: "28px",
+ 
     margin: 0,
     display: "flex",
     textAlign: "center",

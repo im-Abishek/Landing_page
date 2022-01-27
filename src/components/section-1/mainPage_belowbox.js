@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "4px",
     marginTop: 50,
     position: "relative",
-    top: 50,
+    top: 70,
     [theme.breakpoints.between('md','lg')]:{
       width: "85%",
     },

@@ -281,11 +281,8 @@ export const Section_8 = () => {
                 })}
               </Box>
             </Box>
-           
           </Box>
-         
         </Container>
-       
       </section>
     </>
   );
