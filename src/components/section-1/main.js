@@ -24,7 +24,9 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 10,
     paddingTop: 20,
     marginBottom: 60,
-   zIndex:1
+    zIndex:1,
+    
+  //  background:"#EFF2F7"
   },
   Main: {
     display: "flex",
@@ -278,7 +280,7 @@ const Main_properties = () => {
   const classes = useStyles();
   const {open,setOpen} = useContext(NavBar)
   return (
-    <section style={{ background: open ? "gray":"#EFF2F7"  ,opacity:open ? 0.6:1 }}>
+    <section style={{opacity: open ? 0.7 : 1,background: open ? "rgba(25, 35, 60, 0.1)":"#EFF2F7"}}>
 
       <Container className={classes.root}>
         {/* <Header/> */}
