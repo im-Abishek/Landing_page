@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     outline: "none",
     border: "0px solid",
-    marginTop: "28px",
+ 
     margin: 0,
     display: "flex",
     textAlign: "center",
