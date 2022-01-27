@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     fontStyle: "italic!important",
     fontWeight:'800',
     fontFamily:"sans-serif",
-    fontSize: 64,
+    fontSize: 60,
     color: "#19233C",
     paddingBottom: 16,
     [theme.breakpoints.down("md")]: {
@@ -292,7 +292,7 @@ const Main_properties = () => {
               <h6 className={classes.FilmWords}>Best law Film</h6>
             </Box>
             <h1 className={classes.Bold_words} id="Lawyer_text">
-              The Lawyer You Choose will make a Difference
+              The Lawyer you Choose will make a Difference
             </h1>
             <p className={classes.Bold_words_2}>
               we are providing the best law serivice for the people.We are
