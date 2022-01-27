@@ -5,6 +5,8 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import Link from '@mui/material/Link';
+import { IconButton } from '@mui/material';
+import MobileNav from './MobileNav/mobileNav';
 
 
 const usestyles = makeStyles((theme)=>({
@@ -16,13 +18,12 @@ const usestyles = makeStyles((theme)=>({
         width:"100%",
         position:"fixed",
         zIndex:3,
-
-
-        
-
-        [theme.breakpoints.between('sm','md')]:{
+       [theme.breakpoints.between('sm','md')]:{
             width:"100%"
         },
+        [theme.breakpoints.down("sm")]:{
+            display:"none"
+        }
     },
     row:{
         display:"flex",
@@ -43,10 +44,7 @@ const usestyles = makeStyles((theme)=>({
         [theme.breakpoints.between('sm','md')]:{
             width:"100%"
         },
-        [theme.breakpoints.between('xs','sm')]:{
-            justifyContent:"space-between",
-            width:"100%"
-        },
+       
     },
     heading:{
         color:"#7073BE",
@@ -67,11 +65,6 @@ const usestyles = makeStyles((theme)=>({
             fontSize:"16px",
             fontWeight:"bold",
             marginTop:"0.3rem"
-        },
-        [theme.breakpoints.between('xs','sm')]:{
-            fontSize:"24px",
-            fontWeight:"700 !important",
-            marginLeft:"1rem"
         },
     },
     center_content:{
@@ -149,6 +142,13 @@ const usestyles = makeStyles((theme)=>({
             marginTop:"0rem"
         },
     },
+    mobileNav:{
+        display:"none",
+        [theme.breakpoints.down("sm")]:{
+            display:"flex",
+          
+        }
+    }
 
 
 }))
@@ -157,8 +157,10 @@ const usestyles = makeStyles((theme)=>({
 const HeaderComponent = () => {
 
     const classes = usestyles()
+   
 
     return (
+        <>
         <Box fixed className={classes.navSection}>
             <Box className={classes.row} style={{display:"flex",flexDirection:"row"}}>
                 <Box className={classes.heading}>
@@ -174,11 +176,13 @@ const HeaderComponent = () => {
                      <Button className={classes.button_1} variant="outlined">Log In</Button>
                      <Button className={classes.button} variant="contained">Register</Button>
                 </Box>
-                <Box className={classes.icon}>
-                   <DensityMediumIcon/>
-                </Box>
+              
             </Box>
         </Box>
+        <Box className={classes.mobileNav} >
+            <MobileNav/>
+        </Box>
+        </>
 
     )
 }

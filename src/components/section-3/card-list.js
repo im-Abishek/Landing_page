@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@mui/styles";
 import { Container, Card, Typography, Button } from "@mui/material";
 import Box from "@mui/material/Box";
@@ -7,6 +7,7 @@ import Discord from "../images/section_3/Discord.svg";
 import pepsi from "../images/section_3/Pepsi.svg";
 import Apple from "../images/section_3/Group46.svg";
 import instagram from "../images/section_3/instagram.svg";
+import { NavBar } from "../../provider/NavBarProvider";
 
 const useStyles = makeStyles((theme) => ({
   root:{
@@ -158,6 +159,7 @@ const Section_3 = () => {
     heading: "Browse 1000s of popular templates to",
     SubHeading: "onboard the elites of web3 world.",
   });
+  const {open,setOpen} = useContext(NavBar)
   return (
     <>
       <section style={{ background: "#EFF2F7" }}> 

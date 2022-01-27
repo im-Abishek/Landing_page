@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import { Box } from "@mui/material";
 // import Header from "../../Header/header";
 import { Button } from "@mui/material";
@@ -15,13 +15,14 @@ import human_2 from "../images/section_1/human2.svg";
 import human_3 from "../images/section_1/human3.svg";
 import Main_BelowContent from "./mainPage_belowbox";
 import '../../App.css'
+import { NavBar } from "../../provider/NavBarProvider";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingBottom: 10,
     paddingTop: 70,
     marginBottom: 60,
-   
+   zIndex:1
   },
   Main: {
     display: "flex",
@@ -50,8 +51,9 @@ const useStyles = makeStyles((theme) => ({
     
   },
   Bold_words: {
-    // fontStyle: "italic!important",
-    // fontWeight:'900',
+    fontStyle: "italic!important",
+    fontWeight:'800',
+    fontFamily:"sans-serif",
     fontSize: 64,
     color: "#19233C",
     paddingBottom:16,
@@ -61,8 +63,8 @@ const useStyles = makeStyles((theme) => ({
   },
   Bold_words_2:{
   paddingBottom:30,
- fontWeight:500 ,
- color:'#6D6D6D',
+  fontWeight:500 ,
+  color:'#6D6D6D',
  [theme.breakpoints.down("md")]: {
   fontSize:12
 },
@@ -272,9 +274,10 @@ const useStyles = makeStyles((theme) => ({
 
 const Main_properties = () => {
   const classes = useStyles();
-
+  const {open,setOpen} = useContext(NavBar)
   return (
-    <section style={{ background: "#EFF2F7" }}>
+    <section style={{ background: open ? "gray":"#EFF2F7"  ,opacity:open ? 0.6:1 }}>
+
       <Container className={classes.root}>
         {/* <Header/> */}
         <Box component="div" className={classes.Main}>
