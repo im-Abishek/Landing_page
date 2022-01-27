@@ -25,7 +25,9 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 20,
     marginBottom: 60,
     zIndex:1,
-    
+    [theme.breakpoints.down("sm")]:{
+      marginBottom: 0,
+    },
   //  background:"#EFF2F7"
   },
   Main: {
@@ -127,6 +129,11 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "center!important",
       textAlign: "center",
     },
+  },
+  ButtonAlign:{
+    [theme.breakpoints.down("sm")]: {
+   margin:'auto'
+    }
   },
   PlayButton: {
     marginRight: 20,
@@ -242,13 +249,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   images_1: {
-    width: 43,
+    width: 41,
     borderRadius: 20,
     position: "absolute",
     left: 12,
   },
   images_2: {
-    width: 45,
+    width: 41,
     borderRadius: 20,
     position: "absolute",
     left: 39,
@@ -256,16 +263,16 @@ const useStyles = makeStyles((theme) => ({
     background: "#53D5BB",
   },
   images_3: {
-    width: 45,
+    width: 44,
     borderRadius: 20,
     position: "absolute",
     left: 65,
-    height: 46,
+    height: 43,
     background: "#FEAE29",
   },
   userCount: {
-    width: 46,
-    height: 46,
+    width: 44,
+    height: 44,
     borderRadius: "50%",
     background: "#7073BE",
     position: "absolute",
